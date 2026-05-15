@@ -67,7 +67,21 @@ cd src
 python cart_facade.py
 ```
 
----
+Expected output:
+```
+[LOG] Event: item_added | Data: {'name': 'Laptop', 'price': 999.99, 'quantity': 1}
+[STOCK] Reserving stock for: Laptop x1
+[LOG] Event: item_added | Data: {'name': 'Mouse', 'price': 29.99, 'quantity': 2}
+[STOCK] Reserving stock for: Mouse x2
+[LOG] Event: coupon_applied | Data: {'code': 'SAVE10'}
+===== RECEIPT =====
+Laptop x1 - $999.99
+Mouse x2 - $59.98
+User type: vip
+Coupon: SAVE10
+TOTAL: $837.98
+===================
+```
 
 ## 🏛️ Architecture Diagram
 
@@ -79,6 +93,12 @@ __________________________________________________
 
 ## 🤖 AI Usage
 
-AI tools (Claude) were used for code review, pattern discussion, and
-pair programming. All AI interactions are logged in docs/ai-log/.
+## 🤖 AI Usage
+
+AI tools (Claude) were used for:
+- Code review and design pattern discussion (Phase 1)
+- Pattern selection advice — Adapter vs Facade (Phase 2)
+- 30+ minute pair programming session (Phase 3)
+
+All AI interactions are logged in docs/ai-log/.
 All code was written and understood by the student — no direct copying.
